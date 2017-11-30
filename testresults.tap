@@ -1,0 +1,41 @@
+# TAP results for test_add[2-2-4]
+ok 1 - test_add[2-2-4]
+# TAP results for test_add[5-5-10]
+ok 2 - test_add[5-5-10]
+# TAP results for test_add[3-2-7]
+not ok 3 - test_add[3-2-7]
+# 
+# x = 3, y = 2, expected = 7
+# 
+#     @pytest.mark.parametrize("x, y, expected", [
+#         (2, 2, 4),
+#         (5, 5, 10),
+#         (3, 2, 7),
+#         (2, -2, 9)
+#     ])
+#     def test_add(x, y, expected):
+#         time.sleep(10)
+# >       assert add(x, y) == expected
+# E       assert 5 == 7
+# E        +  where 5 = add(3, 2)
+# 
+# test_calc.py:15: AssertionError
+# TAP results for test_add[2--2-9]
+not ok 4 - test_add[2--2-9]
+# 
+# x = 2, y = -2, expected = 9
+# 
+#     @pytest.mark.parametrize("x, y, expected", [
+#         (2, 2, 4),
+#         (5, 5, 10),
+#         (3, 2, 7),
+#         (2, -2, 9)
+#     ])
+#     def test_add(x, y, expected):
+#         time.sleep(10)
+# >       assert add(x, y) == expected
+# E       assert 0 == 9
+# E        +  where 0 = add(2, -2)
+# 
+# test_calc.py:15: AssertionError
+1..4
